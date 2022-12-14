@@ -17,6 +17,103 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+    
+    excN1: kp_excl_n1 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "excl_n1";
+        #binding-cells = <0>;
+        bindings = <&kp EXCL>, <&kp KP_N1>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    plusN2: kp_plus_n2 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "plus_n2";
+        #binding-cells = <0>;
+        bindings = <&kp PLUS>, <&kp KP_N2>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    hashN3: kp_hash_n3 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "hash_n3";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp KP_N3>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    lparN4: kp_lpar_n4 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "lpar_n4";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp KP_N4>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    ampsN5: kp_amps_n5 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "amps_n5";
+        #binding-cells = <0>;
+        bindings = <&kp AMPS>, <&kp KP_N5>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    pipeN6: kp_pipe_n6 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "pipe_n6";
+        #binding-cells = <0>;
+        bindings = <&kp PIPE>, <&kp KP_N6>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    rparN7: kp_rpar_n7 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "rpar_n7";
+        #binding-cells = <0>;
+        bindings = <&kp RPAR>, <&kp KP_N7>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    starN8: kp_star_n8 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "star_n8";
+        #binding-cells = <0>;
+        bindings = <&kp STAR>, <&kp KP_N8>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    equalN9: kp_equal_n9 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "equal_n9";
+        #binding-cells = <0>;
+        bindings = <&kp EQUAL>, <&kp KP_N9>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    percentN0: kp_percent_n0 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "percent_n0";
+        #binding-cells = <0>;
+        bindings = <&kp PERCENT>, <&kp KP_N0>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    dollarCaret: kp_dollar_caret {
+        compatible = "zmk,behavior-mod-morph";
+        label = "dollar_caret";
+        #binding-cells = <0>;
+        bindings = <&kp DOLLAR>, <&kp CARET>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
+    bat: kp_bat {
+        compatible = "zmk,behavior-mod-morph";
+        label = "bat";
+        #binding-cells = <0>;
+        bindings = <&kp BSLH>, <&kp AT>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+
   };
 
     keymap {
@@ -25,11 +122,11 @@
 
         default_layer {
             bindings = <
-              &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &tog 1                                                                                 &mo 3             &kp N6 &kp N7   &kp N8    &kp N9  &kp N0    &none
-              &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp LEFT_BRACKET                                                                       &kp RIGHT_BRACKET &kp Y  &kp U    &kp I     &kp O   &kp P     &kp BSLH
-              &kp ESC   &kp A  &kp S  &kp D  &kp F  &kp G  &kp SEMI                  &kp LCTRL  &kp LALT             &kp RALT &kp RCTRL           &kp SQT           &kp H  &kp J    &kp K     &kp L   &kp MINUS &kp EQUAL
-              &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B                   &none    &none      &kp HOME &none &none &kp END  &none     &none                       &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH  &kp RSHFT
-              &mo 2     &none  &none  &none  &none                          &kp BSPC &kp LSHIFT &kp LGUI             &kp LGUI &kp ENTER &kp SPACE                          &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &mo 2
+              &kp GRAVE &excN1 &plusN2 &hashN3 &lparN4 &ampsN5 &tog 1                                                                                 &mo 3             &pipeN6 &rparN7  &starN8   &equalN9 &percentN0 &dollarCaret
+              &kp TAB   &kp Q  &kp W   &kp E   &kp R   &kp T   &kp LEFT_BRACKET                                                                       &kp RIGHT_BRACKET &kp Y   &kp U    &kp I     &kp O    &kp P      &bat
+              &kp ESC   &kp A  &kp S   &kp D   &kp F   &kp G   &kp SEMI                  &kp LCTRL  &kp LALT             &kp RALT &kp RCTRL           &kp SQT           &kp H   &kp J    &kp K     &kp L    &kp MINUS  &kp none
+              &kp LSHFT &kp Z  &kp X   &kp C   &kp V   &kp B                    &none    &none      &kp HOME &none &none &kp END  &none     &none                       &kp N   &kp M    &kp COMMA &kp DOT  &kp FSLH   &kp RSHFT
+              &mo 2     &none  &none   &none   &none                            &kp BSPC &kp LSHIFT &kp LGUI             &kp LGUI &kp ENTER &kp SPACE                           &kp LEFT &kp DOWN  &kp UP   &kp RIGHT  &mo 2
             >;
         };
 
